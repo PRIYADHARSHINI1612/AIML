@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Taxi Rider Prediction</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #eef;
+            padding: 50px;
+        }
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Taxi Weekly Riders Prediction</h2>
+        <form method="POST" action="/predict">
+            <label>Price per Week:</label>
+            <input type="number" name="Priceperweek" required step="any">
+
+            <label>Population:</label>
+            <input type="number" name="Population" required step="any">
+
+            <label>Monthly Income:</label>
+            <input type="number" name="Monthlyincome" required step="any">
+
+            <label>Average Parking per Month:</label>
+            <input type="number" name="Averageparkingpermonth" required step="any">
+
+            <input type="submit" value="Predict">
+        </form>
+    </div>
+</body>
+</html>
